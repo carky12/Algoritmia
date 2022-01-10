@@ -1,4 +1,13 @@
 /.metadata/
-bin
+/bin/
 *.class
 /.scannerwork
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.logs
+*.iml
+.idea/
+.eclipse
