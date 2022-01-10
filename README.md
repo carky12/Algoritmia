@@ -1,15 +1,12 @@
 # Algoritmia
-Algorítmos y Complejidad Algorítmica
-
-#### Creado por carky12
-
-## Descripción
 
 En este repositorio encontrarás código para algorítmos de búsqueda, ordenación y cosas cuirosas de algorítmia.
 Además en ciertos proyectos se analizará el coste algorítmo.
 
 La algorítmia es fundamental para optimizar costes tanto de tiempo de ejecución como en cantidad de memoria. Además es una disciplina
 de las ciencias de la computación que me apasiona.
+
+#### Creado por carky12
 
 ## Índice
 
