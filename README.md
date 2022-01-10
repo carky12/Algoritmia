@@ -46,7 +46,17 @@ La complejidad del algorítmo es O(N), es decir, es lineal con respecto al núme
 
 ## Búsqueda Texto
 
-En este documento se explica el 
+Este proyecto es una solución a una prueba técnica propuesta en una entrevista de trabajo. 
+
+De entrada nos dan un texto y nos piden que contemos el número de palabras y sus repeticiones. 
+
+Para empezar spliteo el texto de entrada por espacios y guardo cada caracter en un array. Después recorro el array preformateando cada palabra, 
+por ejemplo si es un punto, coma, caracter de interrogación o de admiración lo trato como un símbolo vacío. Utilizo un Mapa de Hash para evaluar
+la repetición de cada palabra.
+
+Se puede refinar haciendo un análisis exhaustivo del tipo de caracteres que no deseamos que se evalúen.
+
+Los mapas de Hash son la estructura de datos correcta que se puede utilizar para resolver un problema que trata de buscar y contar.
 
 ## Convertir Números Romanos
 
