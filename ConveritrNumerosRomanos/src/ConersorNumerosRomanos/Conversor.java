@@ -131,8 +131,7 @@ public class Conversor {
 				diferenciaSuperior = limiteMedio - numero;
 				signoInferior = "";
 				signoSuperior = "M";		
-			}
-			
+			}			
 		}
 		
 		if (numero == limiteSuperior) {
@@ -140,8 +139,7 @@ public class Conversor {
 		}		
 		
 		if (diferenciaAnterior > 3) {
-			//Nos quedamos con el límite superior
-			
+			//Nos quedamos con el límite superior			
 			
 			for (int i = 0; i < diferenciaSuperior; i++) {
 				resultado += signoRomano;					

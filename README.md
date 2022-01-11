@@ -21,7 +21,7 @@ de las ciencias de la computación que me apasiona.
 
 ## Búsqueda Binaria
 
-En este proyecto vemos el poder de la optimización en algorímos de búsqueda utilizando la búsqueda binaria de forma iterativa
+En este proyecto vemos el poder de la optimización en algorítmos de búsqueda utilizando la búsqueda binaria de forma iterativa
 para comparar con una búsqueda lineal o secuencial. 
 Se itera un array y se fuerza que el el valor buscado sea el último elemento del array (esto se puede cambiar en el valor de la variable
 correspondiente, o pedir el valor buscado al usuario).
@@ -60,11 +60,76 @@ Los mapas de Hash son la estructura de datos correcta que se puede utilizar para
 
 ## Convertir Números Romanos
 
-En este documento se explica el 
+En este proyecto se construye un conversor de números decimales a números romanos. El algorítmo se basa en recorrer cada cifra individualmente y según
+la posición de la cifra establecer un límite inferior, medio y uno superior (0, 5 y 10). Situal la cifra tratada entre los intervalos 0-5 o 6-10 y 
+si la diferencia es menor que 3 se aplica un signo inferior predefinido. Lo mejor es verlo con un ejemplo:
+
+Signos utilizados para según que cifra estamos tratando:
+I - para las cifras en primera posición desde la izquierda
+X - para las cifras en segunda posición desde la izquierda
+C - para las cifras en tercera posición desde la izquierda
+M - para las cifras en cuarta posición desde la izquierda (primera cifra desde la derecha)
+
+Por ejemplo el número 526:
+Para el 5 utilizaremos el signo "I"
+Para el 2 utilizaremos el signo "X"
+Para el 6 utilizaremos el signo "C"
+
+En función del caso que estemos tratando definimos unos límites inferior y superior. Siempre 
+
+Para el caso I:
+	Si el número es mayor que 5:
+		- Límite inferior: V
+		- Límite superior: X
+	Si el número es menor que 5:
+		- Límite inferior: ""
+		- Límite superior: V
+
+De tal forma que si el número es el 7, se situará entre el (5-10) y los límites serán V-X. Después se evalúa la distancia con el límite inferior, y si es mayor que 3
+se agregan tantos signos "I" como diferencia haya con el límite superior. En este caso 7-5 = 2 que es menor que 3, por tanto quedará signoInferior (V) mas tantos "I" como 
+diferencia exista.
+
+Y así para cada caso de cifra I, X, C o M.
+
+Es complejo de explicar pero no es complejo de seguir en código. Por lo que creo que lo mejor es ver el código.
+
+![Algoritmia](https://github.com/carky12/Algoritmia/blob/master/Imágenes/codigoConversorRomanos.png) 
 
 ## Dance Game
 
-En este documento se explica el 
+Este proyecto es el resultado de una prueba técnica para una entrevista de trabajo. La prueba se dividía en 4 secciones (Git, Java, Sql y Algorítmia). El problema de algorítmia
+decía lo siguiente:
+
+La prueba se llamaba "Dance Game" y consistía en un robot que salta posiciones en el eje X. En la posición cero el robot está en el punto 0, en la posición 1 el robot está en el
+punto 1 y en la posición 2 el robto está en el punto -1. Te pedían en qué punto estará el robot en la posición 5 del juego.
+
+El algoritmo es relativamente fácil, ya que con un bucle y una serie de asignaciones a variables para guardar valores anteriores se soluciona. El problema de esta prueba
+era el tiempo, ya que sólo me dejaban 10 minutos....y sí una vez solucionado parece trivial, pero entre que planteas la algorítmia, tecleas el código y haces unas mínimas
+pruebas se van los 10 minutos.
+
+Yo lo pensé de la siguiente manera:
+
+En cada posición del juego (del robot) hay un valor para el punto y otro valor que nos da lo que avanzó desde el punto anterior. Ejemplo para las primeras posiciones, que son
+los datos de entrada:
+
+0: punto 0, avance 0
+1: punto 1, avance 1
+2: punto -1, avance -2
+
+Para calcular el siguiente punto hay que calcular el avance restando el avance en la posición n-2 al avance en posición n-1. Por tanto para la posición 3 tendríamos 
+que el avance es (-2-1=-3). Por tanto el punto enla posición 3 sería el punto en el que estaba en la posición dos más el avance calculado, es decir -1-3=-4. 
+Por tanto el punto en la posición 3 sería -4. 
+
+0: punto 0, avance 0
+1: punto 1, avance 1
+2: punto -1, avance -2
+3: avance = -2-1 = -3, punto = -1-3=-4
+4: avance = -3-(-2)=-1, punto = -4-1=-5
+5: avance = -1-(-3)=2, punto = -5+2=-3
+y así sucesivamente.
+
+La complejidad del algorítmo es proporcional al número de entradas, ya que en cada operación del bucle no hay operaciones que aumenten
+la complejidad (sólo operaciones aritméticas básicas y re-asiganciones de variables). Por tanto la complejidad es proporcional a O(N).
 
 ## Recursividad
 
