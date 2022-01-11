@@ -135,13 +135,46 @@ la complejidad (sólo operaciones aritméticas básicas y re-asiganciones de var
 
 ## Recursividad
 
-En este documento se explica el 
+En este proyecto se aplican los distintos tipos de recursividad a ejemplos de cálculo. El proyecto se divide en:
 
+- RECURSIVIDAD DIRECTA LINEAL NO FINAL: Es la recursividad en la que en cada ejecución recursiva se trabaja con datos locales diferentes y el 
+resultado final depende de dichos datos intermedios. El coste de este algorítmo es lineal O(n) ya que realizará n llamadas al caso recursivo.	 
+
+- RECURSIVIDAD DIRECTA LINEAL FINAL: Cuando el resultado de los casos recursivos es el correspondiente al valor de la última ejecución de la llamada recursiva.
+El coste de este algorítmo es lineal proporcinal y proporcinal al número de llamadas recursivas que se realicen.
+	 
+- RECURSIVIDAD DIRECTA MÚLTIPLE: Cuando una ejecución recursiva da lugar a múltiples llamadas recursivas. En este caso se repiten muchos cálculos de términos 
+de la serie de Fibonacci. El coste de este algorítmo es O(K^n) es decir exponencial. Es tremendamente ineficiente. 
+Se podría mejorar aplicando técnicas de programación dinámica en la que se podrían ir guardando los términos ya calculados, y consultar si ya se
+han calculado no proceder a calcularlos. Con esto el coste podría pasar a ser lineal.
+	
+- RECURSIVIDAD INDIRECTA: Se produce cuando dos funciones se llaman mutuamente. El coste de este algorítmo es lineal O(n) ya que por cada número
+introducido se recorre la función restando uno al número hasta llegar a cero.
+	 
 ## SonarQube - Complejidad Algorítmica
 
-En este documento se explica el 
+Documentación paso a paso para la instalación del servidor de SonarQube junto con los parámetros de configuración necesaria para Eclipse, JDK y SonarLint para Eclipse.
+
+Las métricas de SonarQube te facilitan la información objetiva de la calidad actual de tu proyecto. SonarQube divide las métricas en las siguientes categorías:
+
+- Evidencias
+- Duplicados
+- Complejidad
+- Tamaño
+- Pruebas
+- Fiabilidad
+- Seguridad
+- Mantenibilidad
+- Evidencias / Issues
+
+Se habla sobre que tipos de complejidad se usan para medir el rendimiento de un programa, explicando las diferencias y características de las complejidades 
+ciclomática, cognitiva y algorítmica.
 
 ## Proyectos Pendientes
 
-En este documento se explica el 
+- Diferentes estructuras de datos (árboles, grafos, maps, etc...)
+- Algorítmos de Ordenación.
+- Algorímos de vuelta atrás.
+- Algorítmos de divide y vencerás.
+
 
