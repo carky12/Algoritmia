@@ -79,12 +79,12 @@ En función del caso que estemos tratando definimos unos límites inferior y sup
 
 Para el caso I:
 	
-	- Si el número es mayor que 5:
-		- - Límite inferior: V
-		- - Límite superior: X
-	- Si el número es menor que 5:
-		- - Límite inferior: ""
-		- - Límite superior: V
+	Si el número es mayor que 5:
+		- Límite inferior: V
+		- Límite superior: X
+	Si el número es menor que 5:
+		- Límite inferior: ""
+		- Límite superior: V
 
 De tal forma que si el número es el 7, se situará entre el (5-10) y los límites serán V-X. Después se evalúa la distancia con el límite inferior, y si es mayor que 3
 se agregan tantos signos "I" como diferencia haya con el límite superior. En este caso 7-5 = 2 que es menor que 3, por tanto quedará signoInferior (V) mas tantos "I" como 
