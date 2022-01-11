@@ -65,25 +65,26 @@ la posición de la cifra establecer un límite inferior, medio y uno superior (0
 si la diferencia es menor que 3 se aplica un signo inferior predefinido. Lo mejor es verlo con un ejemplo:
 
 Signos utilizados para según que cifra estamos tratando:
-I - para las cifras en primera posición desde la izquierda
-X - para las cifras en segunda posición desde la izquierda
-C - para las cifras en tercera posición desde la izquierda
-M - para las cifras en cuarta posición desde la izquierda (primera cifra desde la derecha)
+- I: para las cifras en primera posición desde la izquierda
+- X: para las cifras en segunda posición desde la izquierda
+- C: para las cifras en tercera posición desde la izquierda
+- M: para las cifras en cuarta posición desde la izquierda (primera cifra desde la derecha)
 
 Por ejemplo el número 526:
-Para el 5 utilizaremos el signo "I"
-Para el 2 utilizaremos el signo "X"
-Para el 6 utilizaremos el signo "C"
+- Para el 5 utilizaremos el signo "I"
+- Para el 2 utilizaremos el signo "X"
+- Para el 6 utilizaremos el signo "C"
 
 En función del caso que estemos tratando definimos unos límites inferior y superior. Siempre 
 
 Para el caso I:
-	Si el número es mayor que 5:
-		- Límite inferior: V
-		- Límite superior: X
-	Si el número es menor que 5:
-		- Límite inferior: ""
-		- Límite superior: V
+	
+	- Si el número es mayor que 5:
+		- - Límite inferior: V
+		- - Límite superior: X
+	- Si el número es menor que 5:
+		- - Límite inferior: ""
+		- - Límite superior: V
 
 De tal forma que si el número es el 7, se situará entre el (5-10) y los límites serán V-X. Después se evalúa la distancia con el límite inferior, y si es mayor que 3
 se agregan tantos signos "I" como diferencia haya con el límite superior. En este caso 7-5 = 2 que es menor que 3, por tanto quedará signoInferior (V) mas tantos "I" como 
@@ -93,7 +94,7 @@ Y así para cada caso de cifra I, X, C o M.
 
 Es complejo de explicar pero no es complejo de seguir en código. Por lo que creo que lo mejor es ver el código.
 
-![Algoritmia](https://github.com/carky12/Algoritmia/blob/master/Imágenes/codigoConversorRomanos.png) 
+![Algoritmia](https://github.com/carky12/Algoritmia/blob/master/Imagenes/codigoConversorRomanos.png) 
 
 ## Dance Game
 
@@ -112,20 +113,21 @@ Yo lo pensé de la siguiente manera:
 En cada posición del juego (del robot) hay un valor para el punto y otro valor que nos da lo que avanzó desde el punto anterior. Ejemplo para las primeras posiciones, que son
 los datos de entrada:
 
-0: punto 0, avance 0
-1: punto 1, avance 1
-2: punto -1, avance -2
+- 0: punto 0, avance 0
+- 1: punto 1, avance 1
+- 2: punto -1, avance -2
 
 Para calcular el siguiente punto hay que calcular el avance restando el avance en la posición n-2 al avance en posición n-1. Por tanto para la posición 3 tendríamos 
 que el avance es (-2-1=-3). Por tanto el punto enla posición 3 sería el punto en el que estaba en la posición dos más el avance calculado, es decir -1-3=-4. 
 Por tanto el punto en la posición 3 sería -4. 
 
-0: punto 0, avance 0
-1: punto 1, avance 1
-2: punto -1, avance -2
-3: avance = -2-1 = -3, punto = -1-3=-4
-4: avance = -3-(-2)=-1, punto = -4-1=-5
-5: avance = -1-(-3)=2, punto = -5+2=-3
+- 0: punto 0, avance 0
+- 1: punto 1, avance 1
+- 2: punto -1, avance -2
+- 3: avance = -2-1 = -3, punto = -1-3=-4
+- 4: avance = -3-(-2)=-1, punto = -4-1=-5
+- 5: avance = -1-(-3)=2, punto = -5+2=-3
+
 y así sucesivamente.
 
 La complejidad del algorítmo es proporcional al número de entradas, ya que en cada operación del bucle no hay operaciones que aumenten
